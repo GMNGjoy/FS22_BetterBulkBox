@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="fillableBoxXL.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="../textures/plasticBox_grey_diffuse.png"/>
+    <File fileId="2" filename="$data/maps/textures/shared/props/plasticBox_normal.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/props/plasticBox_specular.png"/>
+    <File fileId="5" filename="$dataS/menu/hud/fillTypes/hud_fill_mineralFeed.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="hud_fill_mineralFeed_mat" materialId="5">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="plasticBox01_mat" materialId="7">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="fillableBoxXL.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="fillableBoxXL" lockedgroup="true" translation="-1.20527e-08 0 0" rotation="0 -90 3.1936e-06" dynamic="true" compound="true" collisionMask="2109442" clipDistance="300" nodeId="15" materialIds="7" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="visuals" rotation="0 -0 -3.1936e-06" nodeId="16"/>
+        <TransformGroup name="interactions" nodeId="17">
+          <TransformGroup name="dischargeNode" translation="0 0.2 0" nodeId="18"/>
+          <TransformGroup name="fillUnit" nodeId="19">
+            <Shape shapeId="2" name="exactFillRootNode" translation="0 1.00094 0" visibility="false" kinematic="true" compound="true" collisionMask="1073741824" nodeId="20" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="3" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" clipDistance="300" nodeId="21" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="4" name="fillVolume" translation="0 0.0559151 0" nodeId="22" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="23">
+          <Shape shapeId="5" name="dynamicMountTrigger" translation="0 0.103449 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="24" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="icons" rotation="0 -0 -3.1936e-06" nodeId="25">
+          <TransformGroup name="iconRef1" translation="0.904944 1.5704 -0.559603" rotation="180 90 90" scale="0.15 1 0.15" nodeId="26">
+            <Shape shapeId="6" name="iconMineralFeedDecal" translation="1.38661e-10 0 0" rotation="0 1.81536e-06 -2.8004e-06" visibility="false" clipDistance="100" nodeId="27" materialIds="5" receiveShadows="true" decalLayer="1"/>
+          </TransformGroup>
+          <TransformGroup name="iconRef2" translation="-0.905 1.57 0.575019" rotation="-3.75751e-05 -90 90" scale="0.15 1 0.15" nodeId="28">
+            <Shape shapeId="6" name="iconMineralFeedDecal" translation="1.38661e-10 0 0" visibility="false" clipDistance="100" nodeId="29" materialIds="5" receiveShadows="true" decalLayer="1"/>
+          </TransformGroup>
+          <TransformGroup name="sizeRef1" translation="0.452348 0.862896 -0.209846" nodeId="30"/>
+          <TransformGroup name="sizeRef2" translation="-0.452349 0.877782 0.212799" rotation="180 -0 180" nodeId="31"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

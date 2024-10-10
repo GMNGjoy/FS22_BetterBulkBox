@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="80">
+    <author>GMNGjoy</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Better Bulk Boxes</en>
+        <de></de>
+    </title>
+    <description>
+        <en>
+            <![CDATA[Would you prefer to buy in bulk, REAL BULK? Tired of buying BigBags at 1000l at a time? Wish you could buy bulk quantites of animal feed to tide you over until the next harvest? Tired of those small Mineral Feed Pallets when feeding 500 cows? Wish you could just buy TMR from the store? The Better Bulk Box Pack has you covered.
+
+TWO SIZES:
+- Fillable Pallet, 1,200l, $50
+- Fillable Pallet XL, 10,000l, $100
+
+MULTIPLE FILL TYPES: (30% bulk discount for filled boxes!)
+- Empty & Refillable (supports any BULK product)
+- Disposable Filled w/ FERTILIZER
+- Disposable Filled w/ LIME
+- Disposable Filled w/ SEEDS
+- Disposable Filled w/ MINERAL_FEED
+- Disposable Filled w/ Total Mixed Ration (FORAGE)
+- Disposable Filled w/ Pig Food (PIGFOOD)
+- Disposable Filled w/ Chicken Food (WHEAT)
+- Disposable Filled w/ Horse Food (OAT)
+]]>
+		</en>
+    </description>
+    <iconFilename>icon_betterBulkBox.dds</iconFilename>
+    <multiplayer supported="true" />
+
+	<storeItems>
+        <!--
+            pallets themselves, not shown in store
+        -->
+        <storeItem xmlFilename="xml/empty/bulkPallet_empty.xml" />
+        <storeItem xmlFilename="xml/empty/bulkPalletXL_empty.xml" />
+
+        <storeItem xmlFilename="xml/fertilizer/bulkPallet_fertilizer.xml" />
+        <storeItem xmlFilename="xml/fertilizer/bulkPalletXL_fertilizer.xml" />
+
+        <storeItem xmlFilename="xml/lime/bulkPallet_lime.xml" />
+        <storeItem xmlFilename="xml/lime/bulkPalletXL_lime.xml" />
+
+        <storeItem xmlFilename="xml/seeds/bulkPallet_seeds.xml" />
+        <storeItem xmlFilename="xml/seeds/bulkPalletXL_seeds.xml" />
+
+        <storeItem xmlFilename="xml/mineralFeed/bulkPallet_mineralFeed.xml" />
+        <storeItem xmlFilename="xml/mineralFeed/bulkPalletXL_mineralFeed.xml" />
+
+        <storeItem xmlFilename="xml/tmr/bulkPallet_tmr.xml" />
+        <storeItem xmlFilename="xml/tmr/bulkPalletXL_tmr.xml" />
+
+        <storeItem xmlFilename="xml/pigFood/bulkPallet_pigFood.xml" />
+        <storeItem xmlFilename="xml/pigFood/bulkPalletXL_pigFood.xml" />
+
+        <storeItem xmlFilename="xml/chickenFood/bulkPallet_chickenFood.xml" />
+        <storeItem xmlFilename="xml/chickenFood/bulkPalletXL_chickenFood.xml" />
+
+        <storeItem xmlFilename="xml/horseFood/bulkPallet_horseFood.xml" />
+        <storeItem xmlFilename="xml/horseFood/bulkPalletXL_horseFood.xml" />
+
+        <!--
+            multi-purchase listings, these are shown in store
+        -->
+        <storeItem xmlFilename="xml/empty/multiPurchase_bulkPallet_empty.xml" />
+        <storeItem xmlFilename="xml/empty/multiPurchase_bulkPalletXL_empty.xml" />
+
+        <storeItem xmlFilename="xml/fertilizer/multiPurchase_bulkPallet_fertilizer.xml" />
+        <storeItem xmlFilename="xml/fertilizer/multiPurchase_bulkPalletXL_fertilizer.xml" />
+
+        <storeItem xmlFilename="xml/lime/multiPurchase_bulkPallet_lime.xml" />
+        <storeItem xmlFilename="xml/lime/multiPurchase_bulkPalletXL_lime.xml" />
+
+        <storeItem xmlFilename="xml/seeds/multiPurchase_bulkPallet_seeds.xml" />
+        <storeItem xmlFilename="xml/seeds/multiPurchase_bulkPalletXL_seeds.xml" />
+
+        <storeItem xmlFilename="xml/mineralFeed/multiPurchase_bulkPallet_mineralFeed.xml" />
+        <storeItem xmlFilename="xml/mineralFeed/multiPurchase_bulkPalletXL_mineralFeed.xml" />
+
+        <storeItem xmlFilename="xml/tmr/multiPurchase_bulkPallet_tmr.xml" />
+        <storeItem xmlFilename="xml/tmr/multiPurchase_bulkPalletXL_tmr.xml" />
+
+        <storeItem xmlFilename="xml/pigFood/multiPurchase_bulkPallet_pigFood.xml" />
+        <storeItem xmlFilename="xml/pigFood/multiPurchase_bulkPalletXL_pigFood.xml" />
+
+        <storeItem xmlFilename="xml/chickenFood/multiPurchase_bulkPallet_chickenFood.xml" />
+        <storeItem xmlFilename="xml/chickenFood/multiPurchase_bulkPalletXL_chickenFood.xml" />
+
+        <storeItem xmlFilename="xml/horseFood/multiPurchase_bulkPallet_horseFood.xml" />
+        <storeItem xmlFilename="xml/horseFood/multiPurchase_bulkPalletXL_horseFood.xml" />
+
+    </storeItems>
+
+    <l10n>
+        <text name="name_bulkPallet">
+            <en>Bulk Pallet</en>
+            <de></de>
+        </text>
+        <text name="name_bulkPalletXL">
+            <en>Bulk Pallet XL</en>
+            <de></de>
+        </text>
+        <text name="name_fillableBox">
+            <en>Fillable Box</en>
+            <de></de>
+        </text>
+        <text name="fillType_refillable">
+            <en>Refillable</en>
+            <de></de>
+        </text>
+        <text name="fillType_filled">
+            <en>Filled</en>
+            <de></de>
+        </text>
+        <text name="fillType_chickenFood">
+            <en>Chicken Food</en>
+            <de></de>
+        </text>
+        <text name="fillType_horseFood">
+            <en>Horse Food</en>
+            <de></de>
+        </text>
+        <text name="function_refillablePallet">
+            <en>This is a refillable box for all of your bulk products.</en>
+            <de></de>
+        </text>
+        <text name="function_disposablePallet">
+            <en>This is a disposable box that comes pre-filled.</en>
+            <de></de>
+        </text>
+        <text name="function_quantityBuy">
+            <en>Buy up to 10 at a time!</en>
+            <de></de>
+        </text>
+    </l10n>
+</modDesc>

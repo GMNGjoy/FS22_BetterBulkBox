@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="fillableBox.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="$data/maps/textures/shared/props/plasticBox_diffuse.png"/>
+    <File fileId="2" filename="$data/maps/textures/shared/props/plasticBox_normal.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/props/plasticBox_specular.png"/>
+    <File fileId="5" filename="$data/objects/pallets/fillablePallet/fillablePallet_diffuse.png"/>
+    <File fileId="6" filename="$data/objects/pallets/fillablePallet/fillablePallet_normal.png"/>
+    <File fileId="7" filename="$data/objects/pallets/fillablePallet/fillablePallet_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="fillablePallet_mat" materialId="6">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="plasticBox01_mat" materialId="30">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="fillableBox.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="fillableBox" nodeId="36">
+        <TransformGroup name="visuals" nodeId="37">
+          <Shape shapeId="1" name="plasticBox" lockedgroup="true" rotation="-1.00179e-05 -0 0" clipDistance="100" nodeId="34" materialIds="30" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="2" name="col" translation="0 1.23286e-05 0" visibility="false" static="true" density="0.0001" nodeId="35" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="interactions" nodeId="39">
+          <TransformGroup name="dischargeNode" translation="0 0.6 0" nodeId="20"/>
+          <TransformGroup name="fillUnit" nodeId="21">
+            <Shape shapeId="3" name="exactFillRootNode" translation="0 1.00094 0" visibility="false" kinematic="true" compound="true" collisionMask="1073741824" nodeId="22" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="4" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" clipDistance="300" nodeId="23" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="5" name="fillVolume" translation="0 -0.0458072 0" visibility="false" nodeId="24" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="38">
+          <Shape shapeId="6" name="dynamicMountTrigger" translation="0 0.103449 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="19" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="7" name="fillablePallet_vis" visibility="false" nodeId="25" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="collisions" visibility="false" clipDistance="10" nodeId="26">
+          <Shape shapeId="8" name="floorCollision" translation="0 -0.141573 0" compoundChild="true" collisionMask="16781578" staticFriction="1" dynamicFriction="1" density="0.001" nodeId="27" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

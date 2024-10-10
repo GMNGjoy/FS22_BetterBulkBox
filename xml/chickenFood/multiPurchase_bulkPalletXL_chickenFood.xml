@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="xml/empty/multiPurchase_bulkPalletXL_empty.xml">
+        <attributes>
+            <!-- update storedata -->
+            <set path="vehicle.storeData.name#params" value="$l10n_name_bulkPalletXL|$l10n_fillType_chickenFood"/>
+            <set path="vehicle.storeData.functions.function(0)" value="$l10n_function_disposablePallet"/>
+            <set path="vehicle.storeData.specs.fillTypes" value="WHEAT" />
+            <set path="vehicle.storeData.image" value="icons/store_bulkPalletXL_chickenFood.dds" />
+            <set path="vehicle.storeData.price" value="2940" />
+            <set path="vehicle.storeData.financeCategory" value="OTHER" />
+
+            <!-- update the fill for the fill type -->
+            <remove path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypeCategories" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits#removeVehicleIfEmpty" value="true" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypes" value="WHEAT" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillType" value="WHEAT" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#capacity" value="10000" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillLevel" value="10000" />
+
+            <!-- set the proper parent pallet file -->
+            <set path="vehicle.multipleItemPurchase#filename" value="xml/chickenFood/bulkPalletXL_chickenFood.xml" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(1)#price" value="7000" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(2)#price" value="5880" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(3)#price" value="8820" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(4)#price" value="11760" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(5)#price" value="14700" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(6)#price" value="17640" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(7)#price" value="20580" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(8)#price" value="23520" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(9)#price" value="26460" />
+        </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>multiBuy bulkPallet chickenFood</name>
+        <image>icons/store_bulkBox_chickenFood.dds</image>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+    </storeData>
+</vehicle>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="xml./empty/multiPurchase_bulkBoxXL_empty.xml">
+        <attributes>
+            <!-- update storedata -->
+            <set path="vehicle.storeData.name#params" value="$l10n_name_bulkBoxXL|$l10n_fillType_horseFood"/>
+            <set path="vehicle.storeData.functions.function(0)" value="$l10n_function_disposablePallet"/>
+            <set path="vehicle.storeData.specs.fillTypes" value="OAT" />
+            <set path="vehicle.storeData.image" value="icons/store_bulkBoxXL_horseFood.dds" />
+            <set path="vehicle.storeData.price" value="11375" />
+            <set path="vehicle.storeData.financeCategory" value="OTHER" />
+
+            <!-- update the fill for the fill type -->
+            <remove path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypeCategories" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits#removeVehicleIfEmpty" value="true" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypes" value="OAT" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillType" value="OAT" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#capacity" value="12500" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillLevel" value="12500" />
+
+            <!-- set the proper parent Box file -->
+            <set path="vehicle.multipleItemPurchase#filename" value="xml/horseFood/bulkBoxXL_horseFood.xml" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(1)#price" value="11375" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(2)#price" value="22750" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(3)#price" value="34125" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(4)#price" value="45500" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(5)#price" value="56875" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(6)#price" value="68250" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(7)#price" value="79625" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(8)#price" value="91000" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(9)#price" value="102375" />
+        </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>multiBuy bulkBoxXL horseFood</name>
+        <image>icons/store_bulkBoxXL_horseFood.dds</image>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+    </storeData>
+</vehicle>

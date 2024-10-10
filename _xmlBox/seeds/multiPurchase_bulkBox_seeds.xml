@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="xml/empty/multiPurchase_bulkBox_empty.xml">
+        <attributes>
+            <!-- update storedata -->
+            <set path="vehicle.storeData.name#params" value="$l10n_name_bulkBox|$l10n_fillType_seeds"/>
+            <set path="vehicle.storeData.functions.function(0)" value="$l10n_function_disposablePallet"/>
+            <set path="vehicle.storeData.specs.fillTypes" value="SEEDS" />
+            <set path="vehicle.storeData.image" value="icons/store_bulkBox_seeds.dds" />
+            <set path="vehicle.storeData.price" value="945" />
+            <set path="vehicle.storeData.financeCategory" value="PURCHASE_SEEDS" />
+
+            <!-- update the fill for the fill type -->
+            <remove path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypeCategories" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits#removeVehicleIfEmpty" value="true" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypes" value="SEEDS" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillType" value="SEEDS" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#capacity" value="1500" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillLevel" value="1500" />
+
+            <!-- set the proper parent Box file -->
+            <set path="vehicle.multipleItemPurchase#filename" value="xml/seeds/bulkBox_seeds.xml" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(1)#price" value="945" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(2)#price" value="1890" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(3)#price" value="2835" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(4)#price" value="3780" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(5)#price" value="4725" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(6)#price" value="5670" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(7)#price" value="6615" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(8)#price" value="7560" />
+            <set path="vehicle.multipleItemPurchaseAmountConfigurations.multipleItemPurchaseAmountConfiguration(9)#price" value="8505" />
+        </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>multiBuy bulkBox seeds</name>
+        <image>icons/store_bulkBox_seeds.dds</image>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+    </storeData>
+</vehicle>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/1.5.0.0/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="xml/empty/bulkBoxXL_empty.xml">
+        <attributes>
+            <!-- update storedata -->
+            <set path="vehicle.storeData.name#params" value="$l10n_name_bulkBoxXL|$l10n_fillType_seeds"/>
+            <set path="vehicle.storeData.image" value="icons/store_bulkBoxXL_seeds.dds" />
+            <set path="vehicle.storeData.price" value="7875" />
+            <set path="vehicle.storeData.financeCategory" value="PURCHASE_SEEDS" />
+
+            <!-- update to the XL box -->
+            <set path="vehicle.base.filename" value="i3d/fillableBoxXL.i3d" />
+            <set path="vehicle.base.components#maxMass" value="750" />
+            <set path="vehicle.base.components.component(0)#mass" value="750" />
+
+            <!-- update the fill for the fill type -->
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(0)#filename" value="i3d/iconSeeds.i3d" />
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(0)#node" value="0" />
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(0)#linkNode" value="iconRef1" />
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(1)#filename" value="i3d/iconSeeds.i3d" />
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(1)#node" value="0" />
+            <set path="vehicle.dynamicallyLoadedParts.dynamicallyLoadedPart(1)#linkNode" value="iconRef2" />
+
+            <!-- update the capacity of the XL size -->
+            <remove path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypeCategories" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits#removeVehicleIfEmpty" value="true" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#fillTypes" value="SEEDS" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#capacity" value="12500" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillType" value="SEEDS" />
+            <set path="vehicle.fillUnit.fillUnitConfigurations.fillUnitConfiguration(0).fillUnits.fillUnit(0)#startFillLevel" value="12500" />
+
+        </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>bulkBoxXL seeds</name>
+        <image>icons/store_bulkBoxXL_seeds.dds</image>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+    </storeData>
+</vehicle>

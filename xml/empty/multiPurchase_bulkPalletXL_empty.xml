@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name params="$l10n_name_bulkPalletXL|$l10n_fillType_refillable">%s %s</name>
+        <specs>
+            <fillTypes>BULK</fillTypes>
+            <weight ignore="true"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_refillablePallet</function>
+            <function>$l10n_function_quantityBuy</function>
+        </functions>
+        <image>icons/store_bulkPalletXL_refillable.png</image>
+        <price>100</price>
+        <lifetime>0</lifetime>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <showInStore>true</showInStore>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+        <financeCategory>PURCHASE_SEEDS</financeCategory>
+        <shopLoadingDelay initial="0.2" config="0.2"/>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>$data/objects/buyableBales/buyableBale.i3d</filename>
+        <size width="2.42" length="1.62" height="1.6" />
+        <components>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="100"/>
+        </components>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit fillTypeCategories="bulk" capacity="10000" />
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <multipleItemPurchase filename="xml/empty/bulkPalletXL_empty.xml" isVehicle="true">
+        <offsets>
+            <offset amount="2" offset="0.2 0 0"/>
+            <offset amount="3" offset="0.2 0 0.4"/>
+            <offset amount="5" offset="0.2 0 0.8"/>
+            <offset amount="7" offset="0.2 0 1.2"/>
+            <offset amount="9" offset="0.2 0 1.4"/>
+        </offsets>
+        <itemPositions>
+            <itemPosition position="0 0 0" rotation="0 0 0"/>
+            <itemPosition position="-2.45 0 0" rotation="0 0 0"/>
+            <itemPosition position="0 0 -1.65" rotation="0 0 0"/>
+            <itemPosition position="-2.45 0 -1.65" rotation="0 0 0"/>
+            <itemPosition position="0 0 -3.3" rotation="0 0 0"/>
+            <itemPosition position="-2.45 0 -3.3" rotation="0 0 0"/>
+            <itemPosition position="0 0 -4.95" rotation="0 0 0"/>
+            <itemPosition position="-2.45 0 -4.95" rotation="0 0 0"/>
+            <itemPosition position="0 0 -6.6" rotation="0 0 0"/>
+            <itemPosition position="-2.45 0 -6.6" rotation="0 0 0"/>
+        </itemPositions>
+    </multipleItemPurchase>
+
+    <multipleItemPurchaseAmountConfigurations>
+        <multipleItemPurchaseAmountConfiguration name="1" price="0"/>
+        <multipleItemPurchaseAmountConfiguration name="2" price="100"/>
+        <multipleItemPurchaseAmountConfiguration name="3" price="200"/>
+        <multipleItemPurchaseAmountConfiguration name="4" price="300"/>
+        <multipleItemPurchaseAmountConfiguration name="5" price="400"/>
+        <multipleItemPurchaseAmountConfiguration name="6" price="500"/>
+        <multipleItemPurchaseAmountConfiguration name="7" price="600"/>
+        <multipleItemPurchaseAmountConfiguration name="8" price="700"/>
+        <multipleItemPurchaseAmountConfiguration name="9" price="800"/>
+        <multipleItemPurchaseAmountConfiguration name="10" price="900"/>
+    </multipleItemPurchaseAmountConfigurations>
+
+</vehicle>

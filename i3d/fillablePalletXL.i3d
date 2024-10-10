@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="fillablePalletXL.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="../textures/fillablePallet_grey_diffuse.png"/>
+    <File fileId="3" filename="$data/objects/pallets/euroPallet01_normal.png"/>
+    <File fileId="4" filename="$data/objects/pallets/euroPallet01_specular.png"/>
+    <File fileId="2" filename="$data/objects/pallets/euroPallet02_diffuse.png"/>
+    <File fileId="6" filename="$data/objects/pallets/fillablePallet/fillablePallet_normal.png"/>
+    <File fileId="7" filename="$data/objects/pallets/fillablePallet/fillablePallet_specular.png"/>
+    <File fileId="8" filename="$dataS/menu/hud/fillTypes/hud_fill_mineralFeed.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="euroPallet_euroPallet01_mat1" materialId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="fillablePallet_mat" materialId="6">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="hud_fill_mineralFeed_mat" materialId="36">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="fillablePalletXL.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="fillablePalletXL" dynamic="true" compound="true" collisionMask="2109442" staticFriction="1" dynamicFriction="1" clipDistance="150" nodeId="18" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="pallet_vis" nodeId="19" materialIds="5" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="dynamicMountTrigger" translation="0 0.090475 0" visibility="false" kinematic="true" trigger="true" collisionMask="134217728" nodeId="20" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="dischargeNode" translation="0 0.6 0" nodeId="21"/>
+          <TransformGroup name="fillUnit" nodeId="22">
+            <Shape shapeId="4" name="exactFillRootNode" translation="0 0.745884 0" visibility="false" kinematic="true" compound="true" collisionMask="1073741824" nodeId="23" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="5" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" clipDistance="300" nodeId="24" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="6" name="fillVolume" nodeId="25" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          </TransformGroup>
+          <Shape shapeId="7" name="fillablePallet_vis" nodeId="26" materialIds="6" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="collisions" visibility="false" clipDistance="10" nodeId="27">
+              <Shape shapeId="8" name="floorCollision01" translation="0.3 5.7e-05 0" compoundChild="true" collisionMask="16781578" staticFriction="1" dynamicFriction="1" density="0.001" nodeId="28" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+              <Shape shapeId="9" name="floorCollision02" translation="-0.3 5.7e-05 0" compoundChild="true" collisionMask="16781578" staticFriction="1" dynamicFriction="1" density="0.001" nodeId="29" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            </TransformGroup>
+          </Shape>
+          <TransformGroup name="icons" nodeId="30">
+            <TransformGroup name="iconRef1" translation="0.942 1.41598 0.791" rotation="90 -0 0" scale="0.2 0.2 0.2" nodeId="31">
+              <Shape shapeId="10" name="iconMineralFeedDecal" translation="-0.460319 -0.404003 0.703547" rotation="-90 -0 0" visibility="false" clipDistance="100" nodeId="39" materialIds="36" receiveShadows="true" decalLayer="1"/>
+            </TransformGroup>
+            <TransformGroup name="iconRef2" translation="-0.94246 1.41598 -0.791314" rotation="-90 -0 -180" scale="0.2 0.2 0.2" nodeId="32">
+              <Shape shapeId="10" name="iconMineralFeedDecal" visibility="false" clipDistance="100" nodeId="40" materialIds="36" receiveShadows="true" decalLayer="1"/>
+            </TransformGroup>
+            <TransformGroup name="sizeRef1" translation="0.416787 0.45 0.395402" nodeId="33"/>
+            <TransformGroup name="sizeRef2" translation="-0.417 0.45 -0.395402" rotation="-180 0 -180" nodeId="34"/>
+          </TransformGroup>
+        </Shape>
+      </Shape>
+  </Scene>
+
+</i3D>

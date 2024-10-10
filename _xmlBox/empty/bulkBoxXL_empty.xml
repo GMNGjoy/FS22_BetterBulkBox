@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name params="$l10n_name_bulkBoxXL|$l10n_fillType_refillable">%s %s</name>
+        <functions>
+            <function>$l10n_function_refillablePallet</function>
+        </functions>
+        <specs>
+            <capacity>12500</capacity>
+            <fillTypes>BULK</fillTypes>
+            <weight ignore="true" />
+        </specs>
+        <image>icons/store_bulkBoxXL_refillable.png</image>
+        <price>120</price>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <rotation>0</rotation>
+        <shopHeight>3.0</shopHeight>
+        <brand>LIZARD</brand>
+        <category>pallets</category>
+        <!-- <financeCategory>PURCHASE_SEEDS</financeCategory> -->
+        <storeIconRendering>
+            <settings cameraXRot="-18" cameraYRot="35" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>i3d/fillableBoxXL.i3d</filename>
+        <size width="2.0" length="2.0" height="2.2" />
+        <canBeReset>false</canBeReset>
+        <input allowed="false" />
+        <components maxMass="750">
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="75" />
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="false">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="BULK"
+                        capacity="12500" updateMass="false" ignoreFillLimit="true">
+                        <exactFillRootNode node="exactFillRootNode" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" maxAllowedHeapAngle="0" fillUnitIndex="1" />
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+    </fillVolume>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="5000" />
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeNode" emptySpeed="5000" fillUnitIndex="1" maxDistance="6"
+            canStartDischargeAutomatically="true">
+            <dischargeSound template="sugarcaneFill" overwriteSharedSound="true" />
+        </dischargeNode>
+    </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" triggerForceAcceleration="4"
+        additionalMountDistance="0.785" jointTransY="0.106" jointLimitToRotY="true" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="fillableBox" />
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="fillableBox" node="0>" />
+        <i3dMapping id="dynamicMountTrigger" node="0>2|0" />
+        <i3dMapping id="dischargeNode" node="0>1|0" />
+        <i3dMapping id="exactFillRootNode" node="0>1|1|0" />
+        <i3dMapping id="fillTrigger" node="0>1|1|1" />
+        <i3dMapping id="fillVolume" node="0>1|1|2" />
+        <i3dMapping id="iconRef1" node="0>3|0" />
+        <i3dMapping id="iconRef2" node="0>3|1" />
+    </i3dMappings>
+</vehicle>
